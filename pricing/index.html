@@ -430,7 +430,7 @@
               </ul>
 
               <div class="mt-3 text-xs text-slate-500" data-i18n="notifyNote">
-                Gentle reminders can be sent via WhatsApp, SMS, and Email.
+                Gentle reminders can be sent via Email.
               </div>
             </div>
           </div>
@@ -549,7 +549,7 @@
                 Packages & pricing
               </h2>
               <p class="mt-2 text-slate-600" data-i18n="plansDesc">
-                Choose monthly or yearly billing. Yearly saves 10% compared to
+                Choose monthly or yearly billing. Yearly saves 50% compared to
                 monthly.
               </p>
             </div>
@@ -569,7 +569,7 @@
                   type="button"
                   class="rounded-2xl px-4 py-2 text-sm font-semibold"
                 >
-                  Annual (save 10%)
+                  Annual (save 50%)
                 </button>
               </div>
             </div>
@@ -946,7 +946,7 @@
       // Pricing + Billing toggle
       // ---------------------------
       const VAT_RATE = 0.21;
-      const DISCOUNT_ANNUAL = 0.1;
+      const DISCOUNT_ANNUAL = 0.5; // ✅ was 0.1 (10%), now 50%
 
       const PRICING = {
         junior: { monthlyExVat: 19.95, highlight: false },
@@ -1017,8 +1017,7 @@
           benefit2: "Fewer no-shows (confirm + reminders)",
           benefit3: "Easier payments",
           benefit4: "Clear reports and booking history",
-          notifyNote:
-            "Gentle reminders can be sent via WhatsApp, SMS, and Email.",
+          notifyNote: "Gentle reminders can be sent via Email.",
 
           // mini cards
           mini1Title: "Calendar & bookings",
@@ -1038,7 +1037,7 @@
           // plans
           plansTitle: "Packages & pricing",
           plansDesc:
-            "Choose monthly or yearly billing. Yearly saves 10% compared to monthly.",
+            "Choose monthly or yearly billing. Yearly saves 50% compared to monthly.",
           vatNote:
             "VAT is shown at 21%. Prices below are excl. VAT unless stated.",
 
@@ -1084,7 +1083,7 @@
             mostPopular: "Recommended",
             billedMonthly: "Billed monthly",
             billedYearly: "Billed yearly",
-            save10: "Save 10%",
+            save10: "Save 50%", // ✅ label key kept, text updated
             perMonth: "/month",
             perYear: "/year",
             monthEq: "Monthly equivalent",
@@ -1193,11 +1192,11 @@
             },
             {
               q: "Can I switch between monthly and annual?",
-              a: "Yes. You can change billing later. Yearly billing saves 10% compared to monthly.",
+              a: "Yes. You can change billing later. Yearly billing saves 50% compared to monthly.",
             },
             {
-              q: "Do you support WhatsApp, SMS, and Email notifications?",
-              a: "Yes. You can send confirmations and friendly reminders via WhatsApp, SMS, and Email (depending on your chosen setup).",
+              q: "Do you support Email notifications?",
+              a: "Yes. You can send confirmations and friendly reminders via Email",
             },
             {
               q: "Can you connect juztbooking to my existing website?",
@@ -1241,7 +1240,7 @@
           benefit2: "ลด no-show (ยืนยัน + แจ้งเตือน)",
           benefit3: "เก็บเงินง่ายขึ้น",
           benefit4: "เห็นภาพรวมและประวัติจองชัดขึ้น",
-          notifyNote: "รองรับการแจ้งเตือนผ่าน WhatsApp, SMS และ Email",
+          notifyNote: "รองรับการแจ้งเตือนผ่าน Email",
 
           mini1Title: "ปฏิทินคิว",
           mini1Desc: "เห็นทั้งวันแบบชัด ๆ",
@@ -1259,7 +1258,7 @@
 
           plansTitle: "แพ็กเกจ & ราคา",
           plansDesc:
-            "เลือกได้ทั้งรายเดือนหรือรายปี รายปีประหยัดกว่า 10% เมื่อเทียบกับรายเดือนค่ะ",
+            "เลือกได้ทั้งรายเดือนหรือรายปี รายปีประหยัดกว่า 50% เมื่อเทียบกับรายเดือนค่ะ",
           vatNote:
             "แสดง VAT 21% ให้ดูชัด ๆ (ราคาด้านล่างเป็นราคายังไม่รวม VAT เว้นแต่ระบุไว้)",
 
@@ -1300,7 +1299,7 @@
             mostPopular: "แนะนำ",
             billedMonthly: "คิดเงินรายเดือน",
             billedYearly: "คิดเงินรายปี",
-            save10: "ประหยัด 10%",
+            save10: "ประหยัด 50%", // ✅
             perMonth: "/เดือน",
             perYear: "/ปี",
             monthEq: "เฉลี่ยต่อเดือน",
@@ -1397,11 +1396,11 @@
             },
             {
               q: "สลับรายเดือน/รายปีได้ไหมคะ?",
-              a: "ได้ค่ะ เปลี่ยนรอบบิลภายหลังได้ รายปีจะประหยัดกว่า 10% เมื่อเทียบกับรายเดือนค่ะ",
+              a: "ได้ค่ะ เปลี่ยนรอบบิลภายหลังได้ รายปีจะประหยัดกว่า 50% เมื่อเทียบกับรายเดือนค่ะ",
             },
             {
-              q: "รองรับ WhatsApp, SMS และ Email ไหมคะ?",
-              a: "รองรับค่ะ สามารถส่งยืนยันการจองและแจ้งเตือนแบบสุภาพผ่าน WhatsApp, SMS และ Email (ขึ้นอยู่กับการตั้งค่า)",
+              q: "รองรับ Email ไหมคะ?",
+              a: "รองรับค่ะ สามารถส่งยืนยันการจองและแจ้งเตือนแบบสุภาพผ่าน Email",
             },
             {
               q: "เชื่อมกับเว็บไซต์เดิมได้ไหมคะ?",
@@ -1446,8 +1445,7 @@
           benefit2: "Minder no-shows (bevestiging + reminders)",
           benefit3: "Makkelijker betalen",
           benefit4: "Duidelijke rapporten en boekingshistorie",
-          notifyNote:
-            "Vriendelijke reminders via WhatsApp, SMS en e-mail zijn mogelijk.",
+          notifyNote: "Vriendelijke reminders via e-mail zijn mogelijk.",
 
           mini1Title: "Kalender & boekingen",
           mini1Desc: "Je dag overzichtelijk.",
@@ -1465,7 +1463,7 @@
 
           plansTitle: "Pakketten & prijzen",
           plansDesc:
-            "Kies maandelijks of jaarlijks. Jaarlijks bespaart 10% t.o.v. maandelijks.",
+            "Kies maandelijks of jaarlijks. Jaarlijks bespaart 50% t.o.v. maandelijks.",
           vatNote:
             "BTW wordt getoond als 21%. Prijzen hieronder zijn excl. BTW tenzij anders vermeld.",
 
@@ -1507,7 +1505,7 @@
             mostPopular: "Aanbevolen",
             billedMonthly: "Maandelijks",
             billedYearly: "Jaarlijks",
-            save10: "10% korting",
+            save10: "50% korting", // ✅
             perMonth: "/maand",
             perYear: "/jaar",
             monthEq: "Maandelijks equivalent",
@@ -1610,11 +1608,11 @@
             },
             {
               q: "Kan ik wisselen tussen maandelijks en jaarlijks?",
-              a: "Ja. Je kunt later aanpassen. Jaarlijks bespaart 10% t.o.v. maandelijks.",
+              a: "Ja. Je kunt later aanpassen. Jaarlijks bespaart 50% t.o.v. maandelijks.",
             },
             {
-              q: "Ondersteunen jullie WhatsApp, SMS en e-mail meldingen?",
-              a: "Ja. Bevestigingen en vriendelijke reminders kunnen via WhatsApp, SMS en e-mail (afhankelijk van je setup).",
+              q: "Ondersteunen jullie e-mail meldingen?",
+              a: "Ja. Bevestigingen en vriendelijke reminders kunnen via e-mail.",
             },
             {
               q: "Kunnen jullie koppelen met mijn bestaande website?",
@@ -1790,7 +1788,8 @@
                   </div>
 
                   <div class="mt-4">
-                    <a href="/trial" class="${ctaClass}">${p.cta}</a>
+                    <!-- ✅ was /trial, now /payment -->
+                    <a href="/payment" class="${ctaClass}">${p.cta}</a>
                   </div>
                 </div>
               </article>
@@ -1826,7 +1825,7 @@
           if (pack[key]) el.textContent = pack[key];
         });
 
-        // Update billing toggle labels by language
+        // Update billing toggle labels by language (✅ 50%)
         btnMonthly.textContent =
           lang === "th"
             ? "รายเดือน"
@@ -1835,10 +1834,10 @@
             : "Monthly";
         btnAnnual.textContent =
           lang === "th"
-            ? "รายปี (ลด 10%)"
+            ? "รายปี (ลด 50%)"
             : lang === "nl"
-            ? "Jaarlijks (10% korting)"
-            : "Annual (save 10%)";
+            ? "Jaarlijks (50% korting)"
+            : "Annual (save 50%)";
 
         setLangLabel(lang);
         localStorage.setItem(LANG_STORAGE_KEY, lang);

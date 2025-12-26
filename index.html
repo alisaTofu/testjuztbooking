@@ -414,7 +414,7 @@
               <span
                 class="rounded-full bg-white px-3 py-1 font-semibold text-slate-700 ring-1 ring-slate-200"
                 data-i18n="annualNote"
-                >Annual billing saves 10%</span
+                >Annual billing saves 50%</span
               >
             </div>
 
@@ -939,7 +939,7 @@
                 Packages & pricing
               </h2>
               <p class="mt-2 text-slate-600" data-i18n="homePlansDesc">
-                Choose monthly or yearly billing. Yearly saves 10% compared to
+                Choose monthly or yearly billing. Yearly saves 50% compared to
                 monthly.
               </p>
             </div>
@@ -959,7 +959,7 @@
                   type="button"
                   class="rounded-2xl px-4 py-2 text-sm font-semibold"
                 >
-                  Annual (save 10%)
+                  Annual (save 50%)
                 </button>
               </div>
             </div>
@@ -1210,7 +1210,7 @@
           benefit2: "Reduce no-show",
           benefit3: "Easier payments",
           benefit4: "Clear reports",
-          annualNote: "Annual billing saves 10%",
+          annualNote: "Annual billing saves 50%",
 
           stepsTitle: "Getting started is easy",
           step1: "Add services (price and duration)",
@@ -1293,20 +1293,20 @@
           // ✅ Home packages section
           homePlansTitle: "Packages & pricing",
           homePlansDesc:
-            "Choose monthly or yearly billing. Yearly saves 10% compared to monthly.",
+            "Choose monthly or yearly billing. Yearly saves 50% compared to monthly.",
           homeVatNote:
             "VAT is shown at 21%. Prices below are excl. VAT unless stated.",
           homePlansSeeAll: "See full pricing details",
           homePlansCta: "Start 15-day trial",
 
-          // ✅ Packages content (kept separate to avoid key collisions with Home hero)
+          // ✅ Packages content
           homePricing: {
-            billing: { monthly: "Monthly", annual: "Annual (save 10%)" },
+            billing: { monthly: "Monthly", annual: "Annual (save 50%)" },
             labels: {
               mostPopular: "Recommended",
               billedMonthly: "Billed monthly",
               billedYearly: "Billed yearly",
-              save10: "Save 10%",
+              save10: "Save 50%",
               perMonth: "/month",
               perYear: "/year",
               monthEq: "Monthly equivalent",
@@ -1436,7 +1436,7 @@
           benefit2: "ลด no-show",
           benefit3: "ชำระเงินง่ายขึ้น",
           benefit4: "รายงานชัดขึ้น",
-          annualNote: "รายปีประหยัด 10%",
+          annualNote: "รายปีประหยัด 50%",
 
           stepsTitle: "เริ่มใช้งานง่ายมาก",
           step1: "เพิ่มบริการ (ราคา และระยะเวลา)",
@@ -1518,19 +1518,19 @@
 
           // ✅ Home packages section
           homePlansTitle: "แพ็กเกจ & ราคา",
-          homePlansDesc: "เลือกได้ทั้งรายเดือนหรือรายปี (รายปีประหยัดกว่า 10%)",
+          homePlansDesc: "เลือกได้ทั้งรายเดือนหรือรายปี (รายปีประหยัดกว่า 50%)",
           homeVatNote:
             "แสดง VAT 21% ให้ดูชัด ๆ (ราคาด้านล่างเป็นราคายังไม่รวม VAT)",
           homePlansSeeAll: "ดูรายละเอียดราคาแบบเต็ม",
           homePlansCta: "เริ่มทดลองใช้ 15 วัน",
 
           homePricing: {
-            billing: { monthly: "รายเดือน", annual: "รายปี (ลด 10%)" },
+            billing: { monthly: "รายเดือน", annual: "รายปี (ลด 50%)" },
             labels: {
               mostPopular: "แนะนำ",
               billedMonthly: "คิดเงินรายเดือน",
               billedYearly: "คิดเงินรายปี",
-              save10: "ประหยัด 10%",
+              save10: "ประหยัด 50%",
               perMonth: "/เดือน",
               perYear: "/ปี",
               monthEq: "เฉลี่ยต่อเดือน",
@@ -1650,7 +1650,7 @@
           benefit2: "Minder no-shows",
           benefit3: "Makkelijker betalen",
           benefit4: "Duidelijke rapporten",
-          annualNote: "Jaarlijks 10% korting",
+          annualNote: "Jaarlijks 50% korting",
 
           stepsTitle: "Zo begin je eenvoudig",
           step1: "Diensten toevoegen (prijs en duur)",
@@ -1733,7 +1733,7 @@
           // ✅ Home packages section
           homePlansTitle: "Pakketten & prijzen",
           homePlansDesc:
-            "Kies maandelijks of jaarlijks. Jaarlijks bespaart 10% t.o.v. maandelijks.",
+            "Kies maandelijks of jaarlijks. Jaarlijks bespaart 50% t.o.v. maandelijks.",
           homeVatNote:
             "BTW wordt getoond als 21%. Prijzen hieronder zijn excl. BTW tenzij anders vermeld.",
           homePlansSeeAll: "Bekijk alle prijsdetails",
@@ -1742,13 +1742,13 @@
           homePricing: {
             billing: {
               monthly: "Maandelijks",
-              annual: "Jaarlijks (10% korting)",
+              annual: "Jaarlijks (50% korting)",
             },
             labels: {
               mostPopular: "Aanbevolen",
               billedMonthly: "Maandelijks",
               billedYearly: "Jaarlijks",
-              save10: "10% korting",
+              save10: "50% korting",
               perMonth: "/maand",
               perYear: "/jaar",
               monthEq: "Maandelijks equivalent",
@@ -1867,8 +1867,6 @@
         const label = lang === "en" ? "EN" : lang === "th" ? "TH" : "NL";
         if (langLabelDesktop) langLabelDesktop.textContent = label;
         if (langLabelMobile) langLabelMobile.textContent = label;
-
-        // Optional: set <html lang="...">
         document.documentElement.setAttribute("lang", lang);
       }
 
@@ -1876,7 +1874,7 @@
       // ✅ Home Packages logic
       // ---------------------------
       const VAT_RATE = 0.21;
-      const DISCOUNT_ANNUAL = 0.1;
+      const DISCOUNT_ANNUAL = 0.5;
 
       const PRICING_META = {
         junior: { monthlyExVat: 19.95, highlight: false },
@@ -2041,7 +2039,7 @@
 
                   <div class="mt-4">
                     <a
-                      href="/trial"
+                      href="/payment"
                       class="inline-flex w-full items-center justify-center rounded-2xl bg-primary px-4 py-3 text-sm font-semibold text-white hover:opacity-95"
                     >${p.cta}</a>
                   </div>
